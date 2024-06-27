@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FocusTimer V2</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="src/main.js" defer></script>
+  </head>
+  <body>
+    <div id="app" class="flex">
+      <button id="dark-mode">
+        <span class="sr-only">Ativar / Desativar Dark Mode</span>
+        <i class="ph-bold ph-sun-dim"></i>
+        <i class="ph-bold ph-moon-stars"></i>
+      </button>
+
+      <div class="time">
+        <section id="timer" class="flex">
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </section>
+
+        <section id="controls" class="flex">
+          <button data-action="toggleRunning" class="ph-bold ph-play-circle">
+            <span class="sr-only">Play no timer</span>
+          </button>
+
+          <button data-action="reset" class="ph-bold ph-pause-circle">
+            <span class="sr-only">Resetar o timer</span>
+          </button>
+          
+          <button data-action="stop" class="ph-bold ph-stop-circle">
+            <span class="sr-only">Parar timer</span>
+          </button>
+
+          <button data-action="setTimer" class="ph-bold ph-timer secondary">
+            <span class="sr-only">Selecionar tempo desejado</span>
+          </button>
+
+          <button data-action="setUp" class="ph-bold ph-plus-circle">
+            <span class="sr-only">Aumentar 5 minutos do timer</span>
+          </button>
+
+          <button data-action="setDown" class="ph-bold ph-minus-circle">
+            <span class="sr-only">Diminuir 5 minutos do timer</span>
+          </button>
+        </section>
+      </div>
+
+      <section id="sounds">
+        <button id="forest" data-action="forestOn" class="ph-bold ph-tree">
+          <span class="sr-only">Adicionar sons da natureza</span>
+        </button>
+
+        <button id="rain" data-action="rainOn" class="ph-bold ph-cloud-rain">
+          <span class="sr-only">Adicionar sons de chuva</span>
+        </button>
+
+        <button id="cafeteria" data-action="cafeteriaOn" class="ph-bold ph-storefront">
+          <span class="sr-only">Adicionar sons de cafeteria</span>
+        </button>
+
+        <button id="fire" data-action="fireOn" class="ph-bold ph-fire">
+          <span class="sr-only">Adicionar sons de lareira</span>
+        </button>
+      </section>
+    </div>
+  </body>
+</html>

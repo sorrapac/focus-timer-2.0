@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+  --bg-color: #FFFFFF;
+  --bg-card: #e1e1e6;
+  --bg-forest: #7bb011;
+  --bg-rain: #416397;
+  --bg-cafeteria: #874a00;
+  --bg-fire: #ff0505;
+}
+
+html.dark {
+  --bg-color: #354050;
+}
+  
+html.dark .ph-moon-stars,
+html:not(.dark) .ph-sun-dim {
+  display: none;
+}
+  
+#dark-mode {
+  position: absolute;
+  right: 3.2rem;
+  top: 3.2rem;
+  font-size: 4.2rem;
+  line-height: 0;
+  opacity: 0.8;
+  background-color: transparent;
+  border: none;
+}
+  
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+  
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  place-content: center;
+  background: var(--bg-color);
+}
+  
+#app {
+  max-width: 128rem;
+  gap: 19.2rem;
+  align-items: center;
+  margin-top: -12rem;
+}
+  
+.flex {
+  display: flex;
+}
+  
+#timer {
+  display: flex;
+  justify-content: center;
+  font-size: 12.6rem;
+}
+
+#controls {
+  margin-top: 1.6rem;
+  padding: 1.2rem 2rem;
+  gap: 4rem;
+}
+  
+#controls button {
+  font-size: 4.8rem;
+  background-color: transparent;
+  border: none;
+}
+  
+html.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
+}
+  
+html.running .ph-timer,
+html:not(.running) .ph-stop-circle {
+  display: none;
+}
+  
+#sounds {
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+  
+  
+#sounds button {
+  width: 13.8rem;
+  height: 15.2rem;
+  font-size: 4.8rem;
+  background-color: var(--bg-card);
+  opacity: 0.8;
+  border: none;
+  border-radius: 2.4rem;
+}
+  
+button {
+  cursor: pointer;
+}
+
+.forestOn #forest {
+  background-color: var(--bg-forest);
+}
+
+.rainOn #rain {
+  background-color: var(--bg-rain);
+}
+
+.cafeteriaOn #cafeteria {
+  background-color: var(--bg-cafeteria);
+}
+
+.fireOn #fire {
+  background-color: var(--bg-fire);
+}
+
+@media (max-width: 700px) {
+  
+  body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+  }
+  
+  #app {
+    display: grid;
+    justify-content: center;
+    gap: 4.2rem;
+    margin-top: 2.2rem;
+  }
+  
+  #controls {
+    border-radius: 9rem 9rem;
+    border: transparent;
+  }
+  
+}
